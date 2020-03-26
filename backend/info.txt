@@ -1,0 +1,33 @@
+
+// Rota / Recurso
+
+/* Métodos HTTP:
+GET: Buscar/listar uma infotmação do back-end
+POST: Criar uma infromação no back-end
+PUT: Alterar uma informação no back-end
+DELETE: Deletar uma informação no back-end
+*/
+
+/* Tipos de Parâmetros
+Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
+Route Params: Parâmetros utilizados para indentificar recursos
+Request Body: Corpo da requisição, utilizado prar criar ou alterar recursos
+*/
+
+/* 
+SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+NoSQL: MongoDB, CouchDB, etc 
+*/
+
+/* 
+Driver: SELECT * FROM users
+Query Buillder: table:('users').select('*').where()
+*/
+
+npm install knex
+npm install sqlite3
+npm knex init
+npx knex migrate:make create_ongs //cria tabela
+npx knex migrate:make create_incidents
+npx knex migrate:latest // executa tabela
+npx knex migrate:rollback // desfaz ultima ação no banco
